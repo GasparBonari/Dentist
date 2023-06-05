@@ -241,5 +241,3 @@ jQuery(document).ready(function($) {
 	siteDatePicker();
 
 });
-
-console.log('hi');
