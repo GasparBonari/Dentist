@@ -241,3 +241,18 @@ jQuery(document).ready(function($) {
 	siteDatePicker();
 
 });
+
+
+let mainServices = document.querySelectorAll("#main-services");
+
+let turnosSection = document.querySelector("#turnos");
+
+mainServices.forEach(function(e)
+{
+	e.addEventListener("click", function(e)
+	{
+		e.preventDefault();
+
+		turnosSection.scrollIntoView({behavior: "smooth"});
+	})
+})
