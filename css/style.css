@@ -951,3 +951,8 @@ a {
 .hidden{
   display: none;
 }
+
+.slide{
+  margin: auto;
+  width: 40em;
+}

@@ -1,4 +1,4 @@
- AOS.init({
+AOS.init({
  	duration: 800,
  	easing: 'slide',
  	once: true
@@ -287,3 +287,25 @@ btnToTop.addEventListener("click", function(e)
 
 	document.querySelector(".site-blocks-cover").scrollIntoView({behavior:"smooth"});
 })
+
+
+let slider = document.querySelector(".carousel-inner");
+
+let numberOfPatients = ["patient-2", "patient-3", "patient-4", "patient-5", "patient-6"];
+
+function displaySlides()
+{
+	for(let [i, k] of numberOfPatients.entries())
+	{
+		let HTML =
+		`
+		<div class="carousel-item">
+		    <img class="d-block w-100" src="images/patients/patient-${i + 2}.jpg">
+	    </div>
+		`
+
+		slider.insertAdjacentHTML("afterbegin", HTML)
+	}
+}
+
+displaySlides();
