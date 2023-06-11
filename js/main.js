@@ -243,6 +243,8 @@ jQuery(document).ready(function($) {
 });
 
 
+
+
 let mainServices = document.querySelectorAll("#main-services");
 
 let turnosSection = document.querySelector("#turnos");
@@ -255,4 +257,33 @@ mainServices.forEach(function(e)
 
 		turnosSection.scrollIntoView({behavior: "smooth"});
 	})
+})
+
+
+let btnToTop = document.querySelector(".btn-toTop");
+
+let showBtn = 725;
+
+let scrollContainer = () => 
+{
+	return document.documentElement || document.body;
+}
+
+document.addEventListener("scroll", function()
+{
+	if(scrollContainer().scrollTop > showBtn)
+	{
+		btnToTop.classList.remove("hidden");
+	}
+	else
+	{
+		btnToTop.classList.add("hidden");
+	}
+})
+
+btnToTop.addEventListener("click", function(e)
+{
+	e.preventDefault();
+
+	document.querySelector(".site-blocks-cover").scrollIntoView({behavior:"smooth"});
 })
