@@ -303,7 +303,7 @@ function displaySlides()
 		    <img class="d-block w-100" src="images/patients/patient-${i + 2}.jpg">
 	    </div>
 		`
-
+		
 		slider.insertAdjacentHTML("afterbegin", HTML)
 	}
 }
