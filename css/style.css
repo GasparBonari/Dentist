@@ -1072,6 +1072,25 @@ a {
   opacity: 1;
 }
 
+.whatsapp{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:20px;
+	right:111px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.whatsapp-icon{
+	margin-top:16px;
+}
+
 /*---------responsive-----------*/
 
 @media (max-width:990px){
@@ -1091,6 +1110,16 @@ a {
 
   .btn-slider {
     top: 130%;
+  }
+
+  .slider-index{
+    width: 30em;
+  }
+}
+
+@media (max-width:545px){
+  .slider-index{
+    width: 20em;
   }
 }
 
