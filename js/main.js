@@ -289,23 +289,64 @@ btnToTop.addEventListener("click", function(e)
 })
 
 
-let slider = document.querySelector(".carousel-inner");
+let slides = document.querySelectorAll(".slide");
+let btnRight = document.querySelector(".slider__btn-right");
+let btnLeft = document.querySelector(".slider__btn-left");
 
-let numberOfPatients = ["patient-2", "patient-3", "patient-4", "patient-5", "patient-6"];
+let currentSlide = 0;
+let maxSlide = slides.length;
 
-function displaySlides()
+function goToSlide(slide)
 {
-	for(let [i, k] of numberOfPatients.entries())
+	slides.forEach(function(e, i)
 	{
-		let HTML =
-		`
-		<div class="carousel-item">
-		    <img class="d-block w-100" src="images/patients/patient-${i + 2}.jpg">
-	    </div>
-		`
-		
-		slider.insertAdjacentHTML("afterbegin", HTML)
-	}
+		e.style.transform = `translateX(${150 * (i - slide)}%)`
+	})
 }
 
-displaySlides();
+goToSlide(0)
+
+function goSlideRight()
+{
+	if(maxSlide - 1 == currentSlide)
+	{
+		currentSlide = 0;
+	}
+	else
+	{
+		currentSlide++;
+	}
+
+	goToSlide(currentSlide);
+}
+
+function goSlideLeft()
+{
+	if(currentSlide == 0)
+	{
+		currentSlide = maxSlide - 1;
+	}
+	else
+	{
+		currentSlide--;
+	}
+
+	goToSlide(currentSlide);
+}
+
+btnLeft.addEventListener("click", goSlideLeft);
+btnRight.addEventListener("click", goSlideRight);
+
+
+document.addEventListener("keydown", function(e)
+{
+	if(e.key == "ArrowLeft")
+	{
+		goSlideLeft();
+	}
+
+	if(e.key == "ArrowRight")
+	{
+		goSlideRight();
+	}
+})
