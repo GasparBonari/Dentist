@@ -211,53 +211,53 @@
           <div class="col-lg-6 order-2 order-lg-1">
 
 
-            <form action="#" class="p-5 bg-white">
+            <form action="https://formsubmit.co/gasparbonari@gmail.com" method="POST" class="p-5 bg-white">
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="fname">Nombre</label>
-                  <input type="text" id="fname" class="form-control" placeholder="Nombre" required>
+                  <input type="text" name="Nombre" id="fname" class="form-control" placeholder="Nombre" required>
                 </div>
                 <div class="col-md-6">
                   <label class="font-weight-bold" for="lname">Apellido</label>
-                  <input type="text" id="lname" class="form-control" placeholder="Apellido" required>
+                  <input type="text" name="Apellido" id="lname" class="form-control" placeholder="Apellido" required>
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="phone">Telefono</label>
-                  <input type="text" id="phone" class="form-control" placeholder="Telefono" required>
+                  <input type="text" name="Telefono" id="phone" class="form-control" placeholder="Telefono" required>
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="date">Fecha</label> 
-                  <input type="text" id="date" class="form-control datepicker px-2" placeholder="Fecha del turno" required>
+                  <input type="text" name="Fecha del turno" id="date" class="form-control datepicker px-2" placeholder="Fecha del turno" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="font-weight-bold" for="email">Email</label> 
-                  <input type="email" id="email" class="form-control" placeholder="Email" required>
+                  <label class="font-weight-bold" for="email">Email</label>
+                  <input type="email" id="email" class="form-control" name="Email" placeholder="Email" required>
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="treatment">Tratamiento</label> 
-                  <select name="treatment" id="treatment" class="form-control">
-                    <option value="">Consulta</option>
-                    <option value="">Blanqueamiento Dental</option>
-                    <option value="">Carillas y Coronas</option>
-                    <option value="">Coronas Dentales</option>
-                    <option value="">Diseño de Sonrisa</option>
-                    <option value="">Estetica</option>
-                    <option value="">Implantes Dentales</option>
-                    <option value="">Limpieza Dental</option>
-                    <option value="">Restauraciones Dentales</option>
-                    <option value="">Rehabilitacion Oral</option>
-                    <option value="">Placas de Relajacion</option>
-                    <option value="">Protesis Removiles Totales y Parciales</option>
+                  <select name="tratamiento" id="treatment" class="form-control">
+                    <option value="Consulta">Consulta</option>
+                    <option value="Blanqueamiento Dental">Blanqueamiento Dental</option>
+                    <option value="Carillas y Coronas">Carillas y Coronas</option>
+                    <option value="Coronas Dentales">Coronas Dentales</option>
+                    <option value="Diseño de Sonrisa">Diseño de Sonrisa</option>
+                    <option value="Estetica">Estetica</option>
+                    <option value="Implantes Dentales">Implantes Dentales</option>
+                    <option value="Limpieza Dental">Limpieza Dental</option>
+                    <option value="Restauraciones Dentales">Restauraciones Dentales</option>
+                    <option value="Rehabilitacion Oral">Rehabilitacion Oral</option>
+                    <option value="Placas de Relajacion">Placas de Relajacion</option>
+                    <option value="Protesis Removiles Totales y Parciales">Protesis Removiles Totales y Parciales</option>
                   </select>
                 </div>
               </div>
@@ -265,7 +265,7 @@
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="note">Notas</label> 
-                  <textarea name="note" id="note" cols="30" rows="5" class="form-control" placeholder="Escribe tus notas o preguntas aqui..."></textarea>
+                  <textarea name="Notas" id="note" cols="30" rows="5" class="form-control" placeholder="Escribe tus notas o preguntas aqui..."></textarea>
                 </div>
               </div>
 
@@ -274,6 +274,8 @@
                   <input type="submit" value="Enviar" class="btn btn-primary">
                 </div>
               </div>
+
+              <input type="hidden" name="_template" value="box">
 
             </form>
           </div>
