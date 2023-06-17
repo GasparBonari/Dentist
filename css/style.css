@@ -866,18 +866,20 @@ a {
 .site-block-27 ul li {
   display: inline-block;
   margin-bottom: 4px; }
-  .site-block-27 ul li a, .site-block-27 ul li span {
-    text-align: center;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    border: 1px solid #ccc; }
-  .site-block-27 ul li.active a, .site-block-27 ul li.active span {
-    background: #f23a2e;
-    color: #fff;
-    border: 1px solid transparent; }
+
+.site-block-27 ul li a, .site-block-27 ul li span {
+  text-align: center;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc; }
+
+.site-block-27 ul li.active a, .site-block-27 ul li.active span {
+  background: #f23a2e;
+  color: #fff;
+  border: 1px solid transparent; }
 
 
 .about-me {
@@ -888,8 +890,8 @@ a {
 }
 
 .img-me {
-  max-width: 100%;
-  max-height:100%;
+  max-width: 90%;
+  max-height:90%;
 }
 
 .text-me {
