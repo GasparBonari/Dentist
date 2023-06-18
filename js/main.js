@@ -243,7 +243,7 @@ jQuery(document).ready(function($) {
 });
 
 
-
+// Scroll to online appoitment
 
 let mainServices = document.querySelectorAll("#main-services");
 
@@ -259,6 +259,8 @@ mainServices.forEach(function(e)
 	})
 })
 
+
+// Scroll to top
 
 let btnToTop = document.querySelector(".btn-toTop");
 
@@ -289,9 +291,12 @@ btnToTop.addEventListener("click", function(e)
 })
 
 
+// Slider patients
+
 let slides = document.querySelectorAll(".slide");
 let btnRight = document.querySelector(".slider__btn-right");
 let btnLeft = document.querySelector(".slider__btn-left");
+let dots = document.querySelector(".dots");
 
 let currentSlide = 0;
 let maxSlide = slides.length;
@@ -318,6 +323,7 @@ function goSlideRight()
 	}
 
 	goToSlide(currentSlide);
+	activeDot(currentSlide);
 }
 
 function goSlideLeft()
@@ -332,6 +338,7 @@ function goSlideLeft()
 	}
 
 	goToSlide(currentSlide);
+	activeDot(currentSlide);
 }
 
 btnLeft.addEventListener("click", goSlideLeft);
@@ -350,3 +357,37 @@ document.addEventListener("keydown", function(e)
 		goSlideRight();
 	}
 })
+
+
+// Dots
+
+function creatDots()
+{
+	slides.forEach(function(_,i)
+	{
+		dots.insertAdjacentHTML("beforeend", `<button class="dots__dot" data-slide="${i}"></button>`);
+	})
+}
+
+creatDots();
+
+
+dots.addEventListener("click", function(e)
+{
+	if(e.target.classList.contains("dots__dot"))
+	{
+		let slide = e.target.dataset.slide;
+
+		goToSlide(slide);
+		activeDot(slide);
+	}
+})
+
+function activeDot(slide)
+{
+	document.querySelectorAll(".dots__dot").forEach(e => e.classList.remove("dots__dot--active"));
+
+	document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add("dots__dot--active");
+}
+
+activeDot(0);
