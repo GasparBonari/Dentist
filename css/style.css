@@ -898,7 +898,25 @@ a {
   font-size: 70px;
 }
 
+.google-maps {
+  margin-top: 3rem;
+  padding-bottom: 100%;
+  position: relative;
+}
 
+.google-maps iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.maps-fix{
+  padding-bottom: 40%;
+  margin-left: 3cm;
+  margin-right: 3cm;
+}
 
 .btn-toTop{
   align-items: center;
@@ -1116,6 +1134,11 @@ a {
 
   .slider-index{
     width: 30em;
+  }
+
+  .maps-fix{
+    margin-left: 0cm;
+    margin-right: 0cm;
   }
 }
 
