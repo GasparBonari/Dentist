@@ -1107,11 +1107,6 @@ a {
 	margin-top:16px;
 }
 
-.top-nav{
-  display: flex;
-  left: 100px;
-}
-
 /*---------responsive-----------*/
 @media (min-width:2560px){
   .btn-slider {
