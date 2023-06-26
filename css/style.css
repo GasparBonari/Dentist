@@ -976,37 +976,32 @@ a {
   width: 40em;
 }
 
-
 .slider {
-  max-width: 100rem;
+  width:80%;
+  margin:0 auto;
+  max-width: 100%;
   height: 50rem;
-  margin: 0 auto;
-  position: relative;
-  
-
-  /* IN THE END */
-  overflow: hidden;
+  position:relative;
+  overflow:hidden;
 }
 
 .slide {
   position: absolute;
   top: 0;
-  width: 40rem;
-  height: 40rem;
-  margin-left: 14rem;
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* THIS creates the animation! */
   transition: transform 1s;
 }
 
 .btn-slider {
-
   position: absolute;
-  top: 180%;
+  top: 60%;
   z-index: 10;
 
   align-items: center;
@@ -1050,21 +1045,21 @@ a {
 }
 
 .slider__btn-left {
-  left: 6%;
+  left: 5%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn-right {
-  right: 6%;
+  right: 5%;
   transform: translate(50%, -50%);
 }
 
 .dots {
   position: absolute;
-  bottom: -100%;
+  bottom: 10%;
   left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  transform: translateX(-50%);
 }
 
 .dots__dot {
@@ -1108,102 +1103,26 @@ a {
 }
 
 /*---------responsive-----------*/
-@media (min-width:2560px){
-  .btn-slider {
-    top: 130%;
+
+@media (max-width: 990px)
+{
+  .slider {
+    height: 30rem;
   }
 
-  .dots {
-    bottom: -50%;
-    left: 50%;
-  }
-}
-
-@media (max-width:1024px){
-  .slide{
-    margin-left: 10rem;
-  }
-
-  .btn-slider {
-    top: 130%;
-  }
-
-  .dots {
-    bottom: -50%;
-    left: 50%;
+  .dots{
+    display: none;
   }
 }
 
-@media (max-width:990px){
-  .slide{
-  margin-left: -1rem;
+@media (max-width: 570px)
+{
+  .slider {
+    width: 70%;
+    height: 20rem;
   }
 
-  .btn-slider {
-    top: 200%;
-  }
-
-  .dots {
-    bottom: 50%;
-    left: 50%;
-  }
-}
-
-@media (max-width:769px){
-  .slide{
-  margin-left: 1.5rem;
-  }
-
-  .btn-slider {
-    top: 140%;
-  }
-
-  .slider-index{
-    width: 30em;
-  }
-
-  .maps-fix{
-    margin-left: 0cm;
-    margin-right: 0cm;
-  }
-
-  .dots {
-    bottom: -54%;
-    left: 50%;
-  }
-}
-
-@media (max-width:545px){
-  .slider-index{
-    width: 20em;
-  }
-}
-
-@media (max-width:450px){
-  .slide{
-  margin-left: -2rem;
-  width: 28rem;
-  height: 30rem;
-  }
-
-  .btn-slider {
-    top: 138%;
-  }
-
-  .dots {
-    bottom: -31%;
-    left: 50%;
-  }
-}
-
-@media (max-width:400px){
-
-  .btn-slider {
-    top: 160%;
-  }
-
-  .dots {
-    bottom: -51%;
-    left: 50%;
+  .dots{
+    display: none;
   }
 }
