@@ -971,6 +971,10 @@ a {
   display: none;
 }
 
+.section-fix{
+  padding-top: 70px;
+}
+
 .slider-index{
   margin: auto;
   width: 40em;
