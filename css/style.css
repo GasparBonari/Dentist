@@ -1114,7 +1114,8 @@ a {
 
 @media (max-width: 990px)
 {
-  .slider {
+  .slider,
+  .slider-work {
     height: 30rem;
   }
 
@@ -1125,7 +1126,8 @@ a {
 
 @media (max-width: 570px)
 {
-  .slider {
+  .slider,
+  .slider-work {
     width: 70%;
     height: 17rem;
   }
