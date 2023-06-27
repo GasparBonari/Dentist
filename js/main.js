@@ -391,3 +391,53 @@ function activeDot(slide)
 }
 
 activeDot(0);
+
+
+// Slider work
+
+let slidesWork = document.querySelectorAll(".slide-w");
+let btnWorkLeft = document.querySelector(".slider-work__btn-left");
+let btnWorkRight = document.querySelector(".slider-work__btn-right");
+let maxSlideWork = slidesWork.length;
+let currentSlideWork = 0
+
+
+function goToSlideWork(slide)
+{
+	slidesWork.forEach(function(e, i)
+	{
+		e.style.transform = `translateX(${150 * (i - slide)}%)`;
+	})
+}
+
+goToSlideWork(0);
+
+function goSlideWorkLeft()
+{
+	if(currentSlideWork == 0)
+	{
+		currentSlideWork = maxSlideWork - 1;
+	}
+	else
+	{
+		currentSlideWork--;
+	}
+
+	goToSlideWork(currentSlideWork);
+}
+
+function goSlideWorkRight()
+{
+	if(currentSlideWork == maxSlideWork - 1)
+	{
+		currentSlideWork = 0;
+	}
+	else
+	{
+		currentSlideWork++;
+	}
+	goToSlideWork(currentSlideWork);
+}
+
+btnWorkLeft.addEventListener("click", goSlideWorkLeft)
+btnWorkRight.addEventListener("click",goSlideWorkRight)
