@@ -49,3 +49,17 @@ function goSlideCertificateRight()
 
 btnCertificateLeft.addEventListener("click", goSlideCertificateLeft);
 btnCertificateRight.addEventListener("click", goSlideCertificateRight);
+
+
+document.addEventListener("keydown", function(e)
+{
+	if(e.key == "ArrowLeft")
+	{
+		goSlideCertificateLeft();
+	}
+	
+	if(e.key == "ArrowRight")
+	{
+		goSlideCertificateRight();
+	}
+})
