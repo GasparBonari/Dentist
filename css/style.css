@@ -1142,3 +1142,10 @@ a {
     display: none;
   }
 }
+
+@media (max-width: 760px)
+{
+  .slider-index{
+    width: 20em;
+  }
+}
