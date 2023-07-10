@@ -895,7 +895,15 @@ a {
 }
 
 .text-me {
+  display: flex;
+  flex-direction: column;
   font-size: 70px;
+
+  position: relative;
+  width: 90%;
+  min-height: 1px;
+  padding-right: 15px;
+
 }
 
 .google-maps {
